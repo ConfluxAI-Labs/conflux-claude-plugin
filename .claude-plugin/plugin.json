@@ -1,0 +1,8 @@
+{
+  "name": "conflux",
+  "version": "0.1.0",
+  "description": "Conflux integration for Claude Code — access voice-captured thoughts, session transcripts, and context from the Conflux capture layer",
+  "skills": [
+    "skills/thoughts"
+  ]
+}
