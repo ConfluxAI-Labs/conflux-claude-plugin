@@ -1,8 +1,12 @@
 {
   "name": "conflux",
+  "description": "Conflux integration — access voice-captured thoughts and session context in Claude Code",
   "version": "0.1.0",
-  "description": "Conflux integration for Claude Code — access voice-captured thoughts, session transcripts, and context from the Conflux capture layer",
-  "skills": [
-    "skills/thoughts"
-  ]
+  "author": {
+    "name": "ConfluxAI Labs"
+  },
+  "homepage": "https://getconflux.ai",
+  "repository": "https://github.com/ConfluxAI-Labs/conflux-claude-plugin",
+  "license": "MIT",
+  "keywords": ["voice", "thoughts", "transcription", "context", "capture"]
 }
