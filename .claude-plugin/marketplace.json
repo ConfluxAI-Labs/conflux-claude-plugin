@@ -1,0 +1,18 @@
+{
+  "name": "conflux",
+  "owner": {
+    "name": "ConfluxAI Labs",
+    "email": "hello@getconflux.ai"
+  },
+  "plugins": [
+    {
+      "name": "conflux",
+      "source": ".",
+      "description": "Conflux integration — access voice-captured thoughts and session context in Claude Code",
+      "version": "0.1.0",
+      "author": {
+        "name": "ConfluxAI Labs"
+      }
+    }
+  ]
+}
