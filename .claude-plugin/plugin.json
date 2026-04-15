@@ -1,12 +1,12 @@
 {
   "name": "conflux",
-  "description": "Conflux integration — access voice-captured thoughts and session context in Claude Code",
-  "version": "0.1.0",
+  "description": "Conflux integration — read and write thoughts, session context, and agent handoff notes in Claude Code",
+  "version": "0.2.0",
   "author": {
     "name": "ConfluxAI Labs"
   },
   "homepage": "https://getconflux.ai",
   "repository": "https://github.com/ConfluxAI-Labs/conflux-claude-plugin",
   "license": "MIT",
-  "keywords": ["voice", "thoughts", "transcription", "context", "capture"]
+  "keywords": ["voice", "thoughts", "transcription", "context", "capture", "agent-memory", "cross-agent"]
 }
