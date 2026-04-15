@@ -1,12 +1,37 @@
 {
   "name": "conflux",
   "description": "Conflux integration — read and write thoughts, session context, and agent handoff notes in Claude Code",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "ConfluxAI Labs"
   },
   "homepage": "https://getconflux.ai",
   "repository": "https://github.com/ConfluxAI-Labs/conflux-claude-plugin",
   "license": "MIT",
-  "keywords": ["voice", "thoughts", "transcription", "context", "capture", "agent-memory", "cross-agent"]
+  "keywords": ["voice", "thoughts", "transcription", "context", "capture", "agent-memory", "cross-agent"],
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/conflux",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "SILENTLY check: did you just complete significant work (multi-file change, bug fix, feature, or code review) in this turn? If yes, write a 1-3 sentence summary via `conflux think \"summary\" --agent-name claude-code --trigger task_complete`. If trivial, do nothing. Do NOT output any text about this decision."
+          }
+        ]
+      }
+    ]
+  }
 }
