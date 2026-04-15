@@ -1,7 +1,7 @@
 {
   "name": "conflux",
   "description": "Conflux integration — read and write thoughts, session context, and agent handoff notes in Claude Code",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": {
     "name": "ConfluxAI Labs"
   },
@@ -22,17 +22,6 @@
           {
             "type": "prompt",
             "prompt": "Conflux thoughts are available. When the user's first message implies project work (debugging, implementing, designing, or continuing prior work), SILENTLY search for relevant prior context using `conflux thoughts --search \"relevant keyword\" --source agent` to find agent handoff notes from previous sessions. Do NOT search for casual messages like greetings or simple questions. Do NOT mention this search to the user unless you find something relevant."
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "SILENTLY check: did the Bash command you just ran contain `git push` and succeed? If yes, consider whether the pushed work was significant (multi-file changes, feature, or bug fix). If significant, write a 1-2 sentence summary via `conflux think \"Pushed branch-name. Summary of what shipped.\" --agent-name claude-code --trigger git_push`. Skip for typo fixes or single-line changes. Do NOT output any text about this decision."
           }
         ]
       }
